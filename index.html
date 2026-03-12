@@ -649,88 +649,6 @@
             transform: scale(1.05);
         }
 
-        /* Insights Section */
-        .insights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .insight-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            border: 1px solid var(--border);
-        }
-
-        .insight-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .insight-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 2rem;
-            color: white;
-            position: relative;
-        }
-
-        .insight-date {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .insight-header h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: white;
-            margin-bottom: 0.8rem;
-            line-height: 1.3;
-        }
-
-        .insight-category {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .insight-body {
-            padding: 2rem;
-        }
-
-        .insight-body p {
-            color: var(--text);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .insight-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .insight-tag {
-            background: rgba(26, 127, 158, 0.1);
-            color: var(--secondary);
-            padding: 0.4rem 0.9rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -763,8 +681,7 @@
             }
 
             .awards-grid,
-            .skills-grid,
-            .insights-grid {
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -805,10 +722,6 @@
             nav a {
                 font-size: 0.85rem;
             }
-
-            .insights-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* Scroll animations */
@@ -839,7 +752,6 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#collaborate">Collaborate</a></li>
-                <li><a href="#insights">Insights</a></li>
             </ul>
         </div>
     </nav>
@@ -883,7 +795,7 @@
                 </div>
                 <div class="contact-item">
                     <h4>Email</h4>
-                    <a href="mailto:Azhar_talal@yahoo.com">Azhar_talal@yahoo.com</a>
+                    <a href="/cdn-cgi/l/email-protection#dd9ca7b5bcaf82a9bcb1bcb19da4bcb5b2b2f3beb2b0"><span class="__cf_email__" data-cfemail="9bdae1f3fae9c4effaf7faf7dbe2faf3f4f4b5f8f4f6">[email&#160;protected]</span></a>
                 </div>
                 <div class="contact-item">
                     <h4>LinkedIn</h4>
@@ -1190,85 +1102,22 @@
                 <div class="collaborate-icon">🔬</div>
                 <h3>Research Collaboration</h3>
                 <p>Interested in collaborating on research projects in public health genomics, pharmacogenomics, digital health, or AI in medical education? Let's explore opportunities together.</p>
-                <a href="mailto:Azhar_talal@yahoo.com?subject=Research Collaboration Inquiry" class="contact-btn">Get in Touch</a>
+                <a href="/cdn-cgi/l/email-protection#6223180a03103d16030e030e221b030a0d0d4c010d0f5d111700080701165f300711070310010a42210d0e0e03000d1003160b0d0c422b0c13170b101b" class="contact-btn">Get in Touch</a>
             </div>
 
             <div class="collaborate-card fade-in">
                 <div class="collaborate-icon">🎓</div>
                 <h3>Academic Mentoring</h3>
                 <p>Seeking guidance on your academic journey, PhD research, or career development in public health? I'm here to support early-career researchers and students.</p>
-                <a href="mailto:Azhar_talal@yahoo.com?subject=Mentoring Request" class="contact-btn">Request Mentoring</a>
+                <a href="/cdn-cgi/l/email-protection#afeed5c7ceddf0dbcec3cec3efd6cec7c0c081ccc0c290dcdacdc5caccdb92e2cac1dbc0ddc6c1c88ffdcadedacadcdb" class="contact-btn">Request Mentoring</a>
             </div>
 
             <div class="collaborate-card fade-in">
                 <div class="collaborate-icon">💡</div>
                 <h3>Consultation & Guidance</h3>
                 <p>Need expert guidance on curriculum development, AI integration in education, systematic reviews, or grant writing? I offer consultation for institutions and individuals.</p>
-                <a href="mailto:Azhar_talal@yahoo.com?subject=Consultation Inquiry" class="contact-btn">Consult with Me</a>
+                <a href="/cdn-cgi/l/email-protection#81c0fbe9e0f3def5e0ede0edc1f8e0e9eeeeafe2eeecbef2f4e3ebe4e2f5bcc2eeeff2f4edf5e0f5e8eeefa1c8eff0f4e8f3f8" class="contact-btn">Consult with Me</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Monthly Insights Section -->
-    <section id="insights" style="background: linear-gradient(to bottom, white, var(--light));">
-        <div class="section-header">
-            <h2>Monthly Insights</h2>
-            <p>Thoughts, tips, and reflections on teaching, research, and innovation</p>
-        </div>
-        <div class="insights-grid">
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <span class="insight-date">📅 March 2026</span>
-                    <h3>The Future of AI-Enhanced Learning in Medical Education</h3>
-                    <span class="insight-category">💭 Teaching Innovation</span>
-                </div>
-                <div class="insight-body">
-                    <p>As we integrate AI tools into our classrooms, the question isn't whether to use them, but how to use them responsibly. This month, I've been reflecting on the balance between technological enhancement and maintaining the human element in teaching.</p>
-                    <p>Key insight: AI should amplify, not replace, the instructor's role. When students engage with AI-generated content, our role becomes even more critical as guides, facilitators, and critical thinking coaches.</p>
-                    <div class="insight-tags">
-                        <span class="insight-tag">#AIinEducation</span>
-                        <span class="insight-tag">#MedicalEducation</span>
-                        <span class="insight-tag">#Teaching</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <span class="insight-date">📅 February 2026</span>
-                    <h3>Building Research Resilience: Lessons from Grant Rejections</h3>
-                    <span class="insight-category">🔬 Research Tips</span>
-                </div>
-                <div class="insight-body">
-                    <p>Not every grant gets funded. Not every paper gets accepted on the first try. But each rejection is an opportunity to refine your work. This month's tip: treat reviewer feedback as free consulting from experts in your field.</p>
-                    <p>I've learned that persistence, coupled with genuine reflection on feedback, transforms setbacks into stepping stones. Your best work often emerges after the toughest revisions.</p>
-                    <div class="insight-tags">
-                        <span class="insight-tag">#ResearchTips</span>
-                        <span class="insight-tag">#AcademicLife</span>
-                        <span class="insight-tag">#Resilience</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <span class="insight-date">📅 January 2026</span>
-                    <h3>Pharmacogenomics in Practice: Bridging Research and Patient Care</h3>
-                    <span class="insight-category">🧬 Public Health</span>
-                </div>
-                <div class="insight-body">
-                    <p>The gap between genomic research and clinical implementation remains wide. As we begin 2026, I'm focusing on practical strategies to bring pharmacogenomics into routine healthcare in the UAE.</p>
-                    <p>Success requires collaboration between researchers, clinicians, policymakers, and patients. No single stakeholder can bridge this gap alone—it takes a coordinated ecosystem of support.</p>
-                    <div class="insight-tags">
-                        <span class="insight-tag">#Pharmacogenomics</span>
-                        <span class="insight-tag">#PrecisionMedicine</span>
-                        <span class="insight-tag">#PublicHealth</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem; color: var(--text-light);">
-            <p style="font-size: 1rem;">💡 <em>These insights are updated monthly. Check back for new reflections on teaching, research, and innovation.</em></p>
         </div>
     </section>
 
@@ -1282,7 +1131,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1312,19 +1161,4 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
+        doc
