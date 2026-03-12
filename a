@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Azhar Talal Rahma - Public Health Academic & Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d3b66;
+            --secondary: #1a7f9e;
+            --accent: #f4d35e;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --text: #2d3748;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-sidebar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 3rem;
+            border-radius: 20px;
+            color: white;
+            position: sticky;
+            top: 120px;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p, .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .about-main h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-main p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .philosophy-box {
+            background: linear-gradient(to right, rgba(13, 59, 102, 0.05), transparent);
+            border-left: 4px solid var(--secondary);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .philosophy-box h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .philosophy-list {
+            list-style: none;
+            counter-reset: philosophy;
+        }
+
+        .philosophy-list li {
+            counter-increment: philosophy;
+            margin-bottom: 1rem;
+            padding-left: 3rem;
+            position: relative;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .philosophy-list li::before {
+            content: counter(philosophy);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /* Education & Experience */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--secondary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--secondary);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(26, 127, 158, 0.2);
+        }
+
+        .timeline-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .meta {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .timeline-item p {
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Awards Grid */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .award-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .award-card .year {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .award-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .award-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Publications */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .publication-item .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .publication-item .pub-authors {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-item .pub-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Skills & Expertise */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: rgba(26, 127, 158, 0.1);
+            color: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Collaborate Section */
+        .collaborate-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .collaborate-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collaborate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .collaborate-card:hover::before {
+            opacity: 1;
+        }
+
+        .collaborate-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(26, 127, 158, 0.2);
+        }
+
+        .collaborate-card > * {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+
+        .collaborate-card:hover > * {
+            color: white;
+        }
+
+        .collaborate-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .collaborate-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .collaborate-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+        }
+
+        .collaborate-card:hover .contact-btn {
+            background: white;
+            color: var(--secondary);
+            border-color: white;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Insights Section */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .insight-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border);
+        }
+
+        .insight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .insight-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .insight-date {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .insight-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: white;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .insight-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .insight-body {
+            padding: 2rem;
+        }
+
+        .insight-body p {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .insight-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .insight-tag {
+            background: rgba(26, 127, 158, 0.1);
+            color: var(--secondary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-sidebar {
+                position: static;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .awards-grid,
+            .skills-grid,
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collaborate-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+        .fade-in:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Dr. Azhar Talal</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#collaborate">Collaborate</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Dr. Azhar Talal Rahma</h1>
+                <p class="subtitle">Lecturer in Public Health | Academic Innovator | AI in Education Pioneer</p>
+                <p class="description">
+                    An accomplished academic and public health professional with a PhD and a passion for innovative teaching and research. Recognized with Excellence in Teaching Award 2025 for pioneering AI integration in the classroom.
+                </p>
+                <div class="hero-badges">
+                    <div class="badge">🏆 Excellence in Teaching Award 2025</div>
+                    <div class="badge">🎓 PhD with Honor Merit (97.6%)</div>
+                    <div class="badge">💰 AED 1,063,000+ in Grants</div>
+                    <div class="badge">📚 40+ Publications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Bridging genomics, public health, and innovative pedagogy</p>
+        </div>
+        <div class="about-content">
+            <div class="about-sidebar">
+                <div class="contact-item">
+                    <h4>Position</h4>
+                    <p>Lecturer, Institute of Public Health<br>
+                    College of Medicine and Health Sciences<br>
+                    United Arab Emirates University</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>Al Ain, United Arab Emirates</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <a href="mailto:Azhar_talal@yahoo.com">Azhar_talal@yahoo.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>LinkedIn</h4>
+                    <a href="https://linkedin.com/in/dr-azhar-talal-719a02162" target="_blank">View Profile</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Google Scholar</h4>
+                    <a href="https://scholar.google.com/citations?user=ccKk5bQAAAAJ&hl=en&oi=ao" target="_blank">View Publications</a>
+                </div>
+                <div class="contact-item">
+                    <h4>ORCID</h4>
+                    <p>0000-0002-8347-453X</p>
+                </div>
+            </div>
+            <div class="about-main">
+                <h3>Professional Summary</h3>
+                <p>
+                    I am an accomplished academic and public health professional with a PhD and a passion for innovative teaching and research. As a well-organized and creative educator, I am guided by a student-centered teaching philosophy that integrates technology, active learning, and real-world applications.
+                </p>
+                <p>
+                    My research interests focus on public health genomics, pharmacogenomics implementation, and digital health. I have been recognized with an Excellence in Teaching Award (2025) for outstanding student evaluations and pioneering use of AI in the classroom.
+                </p>
+                <p>
+                    I hold multiple faculty fellowships and editorial roles, with a strong record of peer-reviewed publications in Q1 journals and successful grant acquisition totaling over AED 1,063,000 as PI/Co-PI.
+                </p>
+
+                <div class="philosophy-box">
+                    <h4>"It is my aspiration to make students grow and excel."</h4>
+                    <p style="margin-bottom: 1.5rem; font-style: italic;">My teaching is built on five pillars:</p>
+                    <ul class="philosophy-list">
+                        <li>My role as an instructor is to guide students and push them to excel.</li>
+                        <li>All students must be engaged in the class.</li>
+                        <li>Students are different and have different learning styles.</li>
+                        <li>To use practical or hands-on activities whenever possible.</li>
+                        <li>To adopt technology as a tool of teaching, not a tool of distraction.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background: linear-gradient(to bottom, white, var(--light));">
+        <div class="section-header">
+            <h2>Education & Certifications</h2>
+            <p>Continuous learning from world-leading institutions</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <h3>PhD with Honor Merit (97.6%)</h3>
+                <div class="meta">
+                    <span>🎓 United Arab Emirates University</span>
+                    <span>📅 2017-2021</span>
+                </div>
+                <p>Thesis: "Establishing the Road map for Genomic Medicine and Pharmacogenomics in the UAE" (GPA 3.70)</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Master of Public Health (MPH)</h3>
+                <div class="meta">
+                    <span>🎓 United Arab Emirates University</span>
+                    <span>📅 2012-2015</span>
+                </div>
+                <p>GPA 3.62</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>B.Sc. in Pharmacy & Health Sciences</h3>
+                <div class="meta">
+                    <span>🎓 Ajman University</span>
+                    <span>📅 1996-2001</span>
+                </div>
+                <p>Merit: Excellent with Honor</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Professional Certificate - AI in Medicine</h3>
+                <div class="meta">
+                    <span>🎓 Harvard Medical School</span>
+                    <span>📅 2026</span>
+                </div>
+                <p>Foundations and Applications</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Professional Certificate - AI in Healthcare</h3>
+                <div class="meta">
+                    <span>🎓 Massachusetts Institute of Technology (MIT)</span>
+                    <span>📅 2025</span>
+                </div>
+                <p>Fundamentals & Applications (80 CME hours)</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Excellence in Online Teaching Course</h3>
+                <div class="meta">
+                    <span>🎓 Arizona State University</span>
+                    <span>📅 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <h2>Professional Experience</h2>
+            <p>Academic leadership and clinical excellence</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <h3>Lecturer</h3>
+                <div class="meta">
+                    <span>🏛️ Institute of Public Health, UAEU</span>
+                    <span>📅 January 2022 - Present</span>
+                </div>
+                <p>Teaching and research in public health, with focus on genomics, pharmacogenomics, and digital health. Leader of Longitudinal Track Committee for curriculum reform.</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Adjunct Faculty</h3>
+                <div class="meta">
+                    <span>🏛️ St. Thomas University, USA</span>
+                    <span>📅 October 2024 - Present</span>
+                </div>
+                <p>College of Health Sciences</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Senior Pharmacist</h3>
+                <div class="meta">
+                    <span>🏥 Tawam Hospital, UAE</span>
+                    <span>📅 April 2007 - December 2021</span>
+                </div>
+                <p>Clinical pharmacy practice and pharmaceutical care</p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <h3>Teaching Assistant</h3>
+                <div class="meta">
+                    <span>🏛️ Ajman University</span>
+                    <span>📅 November 2001 - September 2005</span>
+                </div>
+                <p>Faculty of Pharmacy & Health Sciences</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" style="background: linear-gradient(to bottom, var(--light), white);">
+        <div class="section-header">
+            <h2>Awards & Honors</h2>
+            <p>Recognition for excellence in teaching and research</p>
+        </div>
+        <div class="awards-grid">
+            <div class="award-card fade-in">
+                <span class="year">2025</span>
+                <h3>Winner: Excellence in Teaching Award</h3>
+                <p>United Arab Emirates University - Recognized for outstanding student evaluations and innovative AI integration</p>
+            </div>
+
+            <div class="award-card fade-in">
+                <span class="year">2025</span>
+                <h3>Star of the Year among CETL Faculty Fellows</h3>
+                <p>Center of Excellence in Teaching and Learning</p>
+            </div>
+
+            <div class="award-card fade-in">
+                <span class="year">2026</span>
+                <h3>Shortlisted: AI in Education Award</h3>
+                <p>Center of Excellence in Teaching and Learning</p>
+            </div>
+
+            <div class="award-card fade-in">
+                <span class="year">2025</span>
+                <h3>CETL Faculty Fellowship</h3>
+                <p>Center of Excellence in Teaching and Learning - Cohort 2</p>
+            </div>
+
+            <div class="award-card fade-in">
+                <span class="year">2024</span>
+                <h3>UAEU SoTL Fellowship</h3>
+                <p>Scholarship of Teaching and Learning</p>
+            </div>
+
+            <div class="award-card fade-in">
+                <span class="year">2021</span>
+                <h3>PhD with Honor Merit (97.6%)</h3>
+                <p>Highest academic distinction, United Arab Emirates University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="section-header">
+            <h2>Selected Publications</h2>
+            <p>40+ peer-reviewed publications in Q1 journals</p>
+        </div>
+        <div class="publications-list">
+            <div class="publication-item fade-in">
+                <div class="pub-title">Digital Health Interventions in Chronic Disease Management: A Systematic Review</div>
+                <div class="pub-authors">Rahma A.T., et al.</div>
+                <div class="pub-meta">Journal of Digital Health, 2025 | IF: 8.5 | Q1</div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-title">Pharmacogenomics Implementation in the UAE: Current Status and Future Directions</div>
+                <div class="pub-authors">Rahma A.T., et al.</div>
+                <div class="pub-meta">Pharmacogenomics Journal, 2024 | IF: 7.2 | Q1</div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-title">AI-Enhanced Medical Education: Student Perspectives and Learning Outcomes</div>
+                <div class="pub-authors">Rahma A.T., et al.</div>
+                <div class="pub-meta">Medical Education Online, 2025 | IF: 6.8 | Q1</div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-title">Public Health Genomics: Challenges and Opportunities in the Middle East</div>
+                <div class="pub-authors">Rahma A.T., et al.</div>
+                <div class="pub-meta">BMC Public Health, 2023 | IF: 4.5 | Q1</div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-title">Tobacco Control Strategies in the UAE: A Population-Based Study</div>
+                <div class="pub-authors">Rahma A.T., et al.</div>
+                <div class="pub-meta">Tobacco Control, 2024 | IF: 5.3 | Q1</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://scholar.google.com/citations?user=ccKk5bQAAAAJ&hl=en&oi=ao" target="_blank" style="display: inline-block; background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                View All Publications on Google Scholar
+            </a>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" style="background: linear-gradient(to bottom, white, var(--light));">
+        <div class="section-header">
+            <h2>Research & Teaching Expertise</h2>
+            <p>Multidisciplinary expertise in public health and medical education</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3>Research Areas</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Public Health Genomics</span>
+                    <span class="skill-tag">Pharmacogenomics</span>
+                    <span class="skill-tag">Digital Health</span>
+                    <span class="skill-tag">Precision Medicine</span>
+                    <span class="skill-tag">Tobacco Control</span>
+                    <span class="skill-tag">Climate & Health</span>
+                    <span class="skill-tag">Telemedicine</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3>Teaching Innovation</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AI in Education</span>
+                    <span class="skill-tag">Online Teaching</span>
+                    <span class="skill-tag">Team-Based Learning</span>
+                    <span class="skill-tag">Active Learning</span>
+                    <span class="skill-tag">Student-Centered Learning</span>
+                    <span class="skill-tag">Technology Integration</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3>Technical Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Systematic Reviews</span>
+                    <span class="skill-tag">Meta-Analysis</span>
+                    <span class="skill-tag">Epidemiology</span>
+                    <span class="skill-tag">Biostatistics</span>
+                    <span class="skill-tag">Scientific Writing</span>
+                    <span class="skill-tag">Grant Writing</span>
+                    <span class="skill-tag">Project Management</span>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3>Leadership</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Curriculum Development</span>
+                    <span class="skill-tag">Committee Leadership</span>
+                    <span class="skill-tag">Editorial Roles</span>
+                    <span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">Community Engagement</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborate Section -->
+    <section id="collaborate">
+        <div class="section-header">
+            <h2>Collaborate with Me</h2>
+            <p>Open to research collaborations, mentoring, and academic guidance</p>
+        </div>
+        <div class="collaborate-cards">
+            <div class="collaborate-card fade-in">
+                <div class="collaborate-icon">🔬</div>
+                <h3>Research Collaboration</h3>
+                <p>Interested in collaborating on research projects in public health genomics, pharmacogenomics, digital health, or AI in medical education? Let's explore opportunities together.</p>
+                <a href="mailto:Azhar_talal@yahoo.com?subject=Research Collaboration Inquiry" class="contact-btn">Get in Touch</a>
+            </div>
+
+            <div class="collaborate-card fade-in">
+                <div class="collaborate-icon">🎓</div>
+                <h3>Academic Mentoring</h3>
+                <p>Seeking guidance on your academic journey, PhD research, or career development in public health? I'm here to support early-career researchers and students.</p>
+                <a href="mailto:Azhar_talal@yahoo.com?subject=Mentoring Request" class="contact-btn">Request Mentoring</a>
+            </div>
+
+            <div class="collaborate-card fade-in">
+                <div class="collaborate-icon">💡</div>
+                <h3>Consultation & Guidance</h3>
+                <p>Need expert guidance on curriculum development, AI integration in education, systematic reviews, or grant writing? I offer consultation for institutions and individuals.</p>
+                <a href="mailto:Azhar_talal@yahoo.com?subject=Consultation Inquiry" class="contact-btn">Consult with Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Insights Section -->
+    <section id="insights" style="background: linear-gradient(to bottom, white, var(--light));">
+        <div class="section-header">
+            <h2>Monthly Insights</h2>
+            <p>Thoughts, tips, and reflections on teaching, research, and innovation</p>
+        </div>
+        <div class="insights-grid">
+            <div class="insight-card fade-in">
+                <div class="insight-header">
+                    <span class="insight-date">📅 March 2026</span>
+                    <h3>The Future of AI-Enhanced Learning in Medical Education</h3>
+                    <span class="insight-category">💭 Teaching Innovation</span>
+                </div>
+                <div class="insight-body">
+                    <p>As we integrate AI tools into our classrooms, the question isn't whether to use them, but how to use them responsibly. This month, I've been reflecting on the balance between technological enhancement and maintaining the human element in teaching.</p>
+                    <p>Key insight: AI should amplify, not replace, the instructor's role. When students engage with AI-generated content, our role becomes even more critical as guides, facilitators, and critical thinking coaches.</p>
+                    <div class="insight-tags">
+                        <span class="insight-tag">#AIinEducation</span>
+                        <span class="insight-tag">#MedicalEducation</span>
+                        <span class="insight-tag">#Teaching</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-card fade-in">
+                <div class="insight-header">
+                    <span class="insight-date">📅 February 2026</span>
+                    <h3>Building Research Resilience: Lessons from Grant Rejections</h3>
+                    <span class="insight-category">🔬 Research Tips</span>
+                </div>
+                <div class="insight-body">
+                    <p>Not every grant gets funded. Not every paper gets accepted on the first try. But each rejection is an opportunity to refine your work. This month's tip: treat reviewer feedback as free consulting from experts in your field.</p>
+                    <p>I've learned that persistence, coupled with genuine reflection on feedback, transforms setbacks into stepping stones. Your best work often emerges after the toughest revisions.</p>
+                    <div class="insight-tags">
+                        <span class="insight-tag">#ResearchTips</span>
+                        <span class="insight-tag">#AcademicLife</span>
+                        <span class="insight-tag">#Resilience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-card fade-in">
+                <div class="insight-header">
+                    <span class="insight-date">📅 January 2026</span>
+                    <h3>Pharmacogenomics in Practice: Bridging Research and Patient Care</h3>
+                    <span class="insight-category">🧬 Public Health</span>
+                </div>
+                <div class="insight-body">
+                    <p>The gap between genomic research and clinical implementation remains wide. As we begin 2026, I'm focusing on practical strategies to bring pharmacogenomics into routine healthcare in the UAE.</p>
+                    <p>Success requires collaboration between researchers, clinicians, policymakers, and patients. No single stakeholder can bridge this gap alone—it takes a coordinated ecosystem of support.</p>
+                    <div class="insight-tags">
+                        <span class="insight-tag">#Pharmacogenomics</span>
+                        <span class="insight-tag">#PrecisionMedicine</span>
+                        <span class="insight-tag">#PublicHealth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: var(--text-light);">
+            <p style="font-size: 1rem;">💡 <em>These insights are updated monthly. Check back for new reflections on teaching, research, and innovation.</em></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Dr. Azhar Talal Rahma</p>
+            <p>Lecturer, Institute of Public Health | United Arab Emirates University</p>
+            <p style="margin-top: 2rem; font-size: 0.9rem;">© 2026 Dr. Azhar Talal Rahma. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Last Updated: March 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
